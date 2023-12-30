@@ -10,7 +10,7 @@ movement is critical to housing market. Due to the significant market changes fr
 To address this issue, I have attempted to try different time series forecasting models on California data to identify how machine learning can impact the prediction results using different models like Support Vector Regression, ARIMA, Exponential Smoothing, Facebook Prophet and Long Short-Term Memory models. 
 
 
-Dataset Link - 
+Dataset Link - https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Master_Data.xlsx
  
 
 ## Dataset Overview
@@ -50,7 +50,7 @@ Dataset Link -
 
 #### Consumer Price Index Behaviour over Time
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/EDA_1.png?raw=true)
 
 - 2008-2009 Downturn (Falling CPI): Reflects deflationary pressures amid the global financial crisis.
 - 2019-2021 Stability (Constant CPI): Signifies an economically steady period with moderate inflation, providing a baseline for consistent housing market trends.
@@ -58,7 +58,7 @@ Dataset Link -
 
 #### Does CPI have an impact on Seasonaly adjusted House price index (NSA HPI)?
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/EDA_2.png?raw=true)
 
 ```NSA=1.26×CPI−115.17```
 
@@ -67,7 +67,7 @@ Dataset Link -
 
 #### Does unemployment affect sales of houses?
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/EDA_3.png?raw=true)
 
 We see a linear relationship between Unsold Inventory Index (UII) and Employment
 Disruptions During Anomalies :
@@ -79,7 +79,7 @@ Though the relationship is inversely proportional, human intervention can change
 
 #### Relationships between data fields
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/EDA_4.png?raw=true)
 
 Despite each feature holding significant theoretical weight in predicting housing prices, they reveal non-linear relationships. To comprehensively analyze this theory, I am employing diverse statistical models, that adds a nuanced statistical perspective.
 
@@ -91,7 +91,7 @@ Considering the time series data, I have specifically implemented mpdels that ar
 
 Suitable for time series forecasting when the data exhibits trends and seasonality.
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Exponential_Smoothing.png?raw=true)
 
 #### Performance metrics 
 
@@ -112,13 +112,13 @@ Facebook Prophet predicts data only when it is in a certain format.
 
 ```ds - Time series data```
 
-Image
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Prophet_model_1.png?raw=true)
 
 I have tested 3 models :
 
 - Model 1 : Prophet Univariate Model
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Prophet_Model1.png?raw=true)
 #### Performance metrics 
 
     - RMSE = 32.77
@@ -127,7 +127,7 @@ I have tested 3 models :
 
 - Model 2 : Prophet Multivariate Model
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Prophet_Model2.png?raw=true)
 #### Performance metrics 
 
     - RMSE = 51.22
@@ -145,7 +145,7 @@ Feature selection is done using recursive feature elimination cross validation (
     - 15 years FRM Average
     - Sales of Existing Single Family Homes (% y-o-y change)
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Prophet_Model3.png?raw=true)
 #### Performance metrics 
 
     - RMSE = 28.14
@@ -164,7 +164,7 @@ This model is a type of recurrent neural network (RNN) architecture designed to 
 
 For this model, the code uses these features in the following manner
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/LSTM_code.png?raw=true)
 
 - Memory Cells : LSTM layer with 50 memory cells. Seq_length represents the length of the input sequence, and 6 represents the number of features for each time step.
 - Gates : Handled internally by the LSTM layers. The return_sequences=True parameter: sequences are returned for each time step.
@@ -173,16 +173,16 @@ For this model, the code uses these features in the following manner
 
 I tested 2 models :
 
-- Model 1 : Prophet Univariate Model
+- Model 1 : LSTM Model 1
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/LSTM_Model1.png?raw=true)
 #### Performance metrics 
 
     - RMSE = 30.65
     - MAE = 27.86
     - MSE = 939.5
 
-- Model 2 : Prophet Multivariate Model
+- Model 2 : LSTM Model 2 - Feature Selection
 
 The selected features are :
     
@@ -192,7 +192,7 @@ The selected features are :
     - 15 years FRM Average
     - Sales of Existing Single Family Homes (% y-o-y change)
 
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/LSTM_Model2.png?raw=true)
 #### Performance metrics 
 
     - RMSE = 10.46
@@ -220,22 +220,23 @@ This model excels in forecasting time-dependent data, capturing historical patte
     - Model performance varies drastically with the selection of orders.
     - Orders were selected by training both the model multiple times using different values of orders and the best performing order values were finalized.
 
-    Image
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)    
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Arima_Model_Order.png?raw=true)    
 
 #### Predictions
 
-ARIMA
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
-Image 
+- ARIMA
+
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Arima_Model1.png?raw=true)
+
 #### Performance metrics 
 
     - RMSE = 49.13
     - MSE = 2414.34
 
-SARIMAX
-![Summary_Page](https://raw.githubusercontent.com/nikunjachoure/movie_database_report/main/summary.png)
-Image 
+- SARIMAX
+
+![Summary_Page](https://github.com/nikunjachoure/House-Price-Prediction/blob/main/Model%20Results%20Snapshots/Sarimax_model1.png?raw=true)
+
 #### Performance metrics 
 
     - RMSE = 29.27
